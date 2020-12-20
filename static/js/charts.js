@@ -104,22 +104,18 @@ function buildCharts(sample) {
         size: sample_values,
         color: otu_ids,
         colorscale: 'Earth'
-        //sizemode: 'area'
       }
-      
     };
 
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
       title: 'Bacteria Cultures Per Sample'
-      
     };
 
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot('bubble', [bubbleData], bubbleLayout);
         
     // 4. Create the trace for the gauge chart.
-    
     var metadata = data.metadata;
     var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
     var result = resultArray[0];
@@ -140,14 +136,12 @@ function buildCharts(sample) {
           {range: [6, 8], color: 'lightgreen'},
           {range: [8, 10], color: 'darkgreen'}
         ]
-      }
-      
+      }  
     }];
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = {
       title: 'Belly Button Washing Frequency'
-     
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
